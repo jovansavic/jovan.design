@@ -1,0 +1,19 @@
+{
+  "name": "starter",
+  "version": "0.0.1",
+  "description": "Starter Pacl",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.24.7",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-js-minify": "0.0.3",
+    "gulp-sass": "^4.0.1"
+  }
+}
