@@ -1,0 +1,30 @@
+<section class="testimonials p-basic">
+	<h2 class="title text-center">
+		{{ site.testimonials_title }}
+	</h2>
+
+	<div class="mw-1080 m-auto d-flex testimonials-wrap">
+
+		{% for t in site.data.testimonials %}
+			<div class="testimonial">
+				<main class="quote">
+					<p class="paragraph dark">
+						{{ t.quote }}
+					</p>
+				</main>
+				<aside class="info d-flex">
+					<div>
+						<div class="bgc-image" style="background-image: url('{{site.baseurl}}/assets/img/{{t.img}}')"></div>
+					</div>
+					<div>
+						<p class="paragraph dark">{{ t.name }}</p>
+						<p class="paragraph light">{{ t.title }}</p>
+					</div>
+				</aside>
+			</div>
+		{% endfor %}
+
+	</div>
+
+
+</section>
