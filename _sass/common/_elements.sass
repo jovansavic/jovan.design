@@ -1,0 +1,20 @@
+.decorated-image
+  position: relative
+  display: inline-block
+  img
+    max-width: 100%
+  &:after
+    display: block
+    content: ""
+    position: absolute
+    opacity: .15
+    background-color: $secondary-color
+    width: 120%
+    height: 30%
+    transform-origin: left
+    transform: rotate(-60deg)
+    left: 30%
+    bottom: -50%
+
+
+// Testimonial

@@ -1,0 +1,31 @@
+$widths: (10, 20, 30, 40, 50, 60, 70, 80, 90, 100)
+$widths_px: (320, 480, 720, 1000, 1080)
+
+@each $width in $widths
+  .w-#{$width}
+    width: #{$width}#{%}
+
+@each $width in $widths_px
+  .mw-#{$width}
+    max-width: #{$width}px
+
+
+.w-md-50
+  width: 50%
+  @media (max-width: $medium_bp)
+    width: 100%
+
+
+.m-auto
+  margin: auto
+
+.p-basic
+  padding: 2rem
+
+// Display
+
+$display_values: (inline, block, flex, grid, inline-block, inline-flex, table, none, initial, inherit)
+
+@each $display in $display_values
+  .d-#{$display}
+    display: #{$display}
