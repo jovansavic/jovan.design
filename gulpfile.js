@@ -1,9 +1,10 @@
 var gulp        = require('gulp');
+var gutil       = require('gulp-util');
 var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
-var minifyCSS      = require('gulp-clean-css');
-var minifyjs = require('gulp-js-minify');
+var minifyCSS   = require('gulp-clean-css');
+var minifyjs    = require('gulp-js-minify');
 var cp          = require('child_process');
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
@@ -48,15 +49,25 @@ gulp.task('browser-sync', ['sass', 'minify-js', 'jekyll-build'], function() {
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
  */
 gulp.task('sass', function () {
-	return gulp.src(['_sass/common/common.sass', '_sass/common/preloader.sass'])
+	return gulp.src(
+		[
+			'_sass/common/common.sass',
+			'_sass/common/preloader.sass',
+			'_sass/pages/pages.sass',
+		])
 	           .pipe(sass({
 		           includePaths: ['sass'],
 		           onError: browserSync.notify
 	           }))
+	           .on('error', gutil.log)
 	           .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+	           .on('error', gutil.log)
 	           .pipe(minifyCSS({compatibility: 'ie8'}))
+	           .on('error', gutil.log)
 	           .pipe(gulp.dest('_site/assets/style'))
+	           .on('error', gutil.log)
 	           .pipe(browserSync.reload({stream:true}))
+	           .on('error', gutil.log)
 	           .pipe(gulp.dest('assets/style'));
 });
 

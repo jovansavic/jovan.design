@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title #TODO: Write this
+title: Jovan Savic #TODO: Write this
 email: contact@jovan.design
 description: >- # this means to ignore newlines until "baseurl:" TODO: Write this
   Write an awesome description for your new site here. You can edit this
@@ -25,6 +25,9 @@ twitter_username: jsaviic
 github_username:  johnofficial
 instagram_username:  jsaviic
 behance_username:  jovansavic
+mail: contact@jovan.design
+phone: 00381 66 8019 888
+location: Serbia
 
 # Build settings
 markdown: kramdown
@@ -36,14 +39,30 @@ plugins:
 
 include: ["_pages"]
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+
+#Strings
+
+#Footer
+footer_text: designed and developed by jovan savic
+
+#Home Page Strings
+
+hero_title: UI/UX Designer
+hero_subtitle: "& Front-End Developer"
+hero_text: CSSDA awarded designer who solves problems with his design skills and creates premium looking websites and apps. After finding the best design solution, Jovan gives life to his design by coding it.
+hero_btn_01: CHECK WORK
+hero_btn_01_link: /work/
+hero_btn_02: ABOUT ME
+hero_btn_02_link: /about/
+hero_image_url: hero_image_url
+
+testimonials_title: They said about me
+work_title: Work
+work_text: I help companies with web and/or app design, UI/UX problem solving, creating, improving or redesigning brand. Loving to talk with clients about their goals and to find how we can make a project successful. I can guarantee for a clear and professional process that will make our collaboration going smooth.
+
+working_on_title: Jovan is working on
+working_on_text: Some of the side projects I’m working on are thetrack, deezainirano. I’m creating simple, only you really need time tracking software for macOS, Windows, and Linux. You can see current progress of the app at thetrack.app. On the other side, something a little different than my usual work is clothing design. This is a bit more private, and unfortunately you can’t track the progress of it.
+
+
+cta_title: Contact me
+cta_text: Whatever you have project to work on, questions about my work or about me, or you just want to say Hi, you can contact me via e-mail address. If you are interested in working with me, let’s have a quick call to find if we are good fit togehter.

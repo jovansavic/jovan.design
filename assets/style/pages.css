@@ -1,0 +1,1 @@
+.hero-section{-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}@media (min-width:768px){.hero-section{margin-top:10rem}}@media (max-width:768px){.hero-section div:first-child{margin-bottom:2rem}}.hero-section p{margin:1.5rem auto}
