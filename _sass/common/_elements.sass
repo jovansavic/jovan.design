@@ -22,4 +22,33 @@
   background-repeat: no-repeat
   background-size: cover
   border-radius: 50%
-// Testimonial
+
+
+// Text with background behind
+.cool-text
+  position: relative
+  .text
+    z-index: 999
+    position: absolute
+    margin: 0
+    padding-left: 1rem
+    padding-right: 1rem
+  .span-wrap
+    z-index: 0
+    top: 0
+    width: 100%
+    position: absolute
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    transition: .3s
+    transition-delay: .3s
+    &.animated
+      span
+        width: 100%
+    span
+      background: pink
+      will-change: width
+      display: block
+      width: 0
+      transition: .9s

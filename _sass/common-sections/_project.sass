@@ -1,0 +1,30 @@
+.project
+  width: 100%
+  flex-shrink: 0
+  //display: none
+  //z-index: -1
+  text-decoration: none
+  max-width: 320px
+  //transform: scale(0)
+  transition: .3s
+  &.current
+    display: block
+    z-index: 1
+    transform: scale(1)
+
+  p
+    color: $black
+  img
+    width: 100%
+    transition: .3s
+  .project-text
+    margin-top: -20%
+    margin-left: 1rem
+    margin-right: 1rem
+    transition: .3s
+  &:hover
+    img
+      box-shadow: 0 0 12px rgba(0,0,0,0.06)
+    .project-text
+      transform: translateY(-4px)
+      box-shadow: 0 0 12px rgba(0,0,0,0.06)
