@@ -10,57 +10,30 @@
 	<div class="w-md-50">
 
 		<div class="project-wrap" data-slider>
+			{% assign sorted_projects = (site.projects | sort: 'place') | reverse %}
+			{% for project in sorted_projects %}
+				<a href="{{site.baseurl}}{{project.url}}" class="project" data-slider-unit>
+				<img src="{{site.baseurl}}/assets/img/projects/{{ project.thumbnail}}" alt="{{ project.name }} | {{ project.description }}" title="{{ project.name }}">
+				<div class="cool-text project-text" data-bgc="#FFEC84">
+					<div class="span-wrap" data-animate>
+						<span></span>
+					</div>
+					<p class="text paragraph big">
+						{{ project.name }} - {{ project.description }}
+					</p>
+				</div>
+			</a >
+			{% endfor %}
 
-			<a href="#" class="project" data-slider-unit>
-				<img src="{{site.baseurl}}/assets/img/project_thumb.jpg" alt="{{site.title}}" title="{{site.title}}">
-				<div class="cool-text project-text" data-bgc="#FFEC84">
-					<div class="span-wrap" data-animate>
-						<span></span>
-					</div>
-					<p class="text paragraph big">
-						1111. Web design and development
-						for ARTIS (acrhitectural and
-						structural metalwork
-						company).
-					</p>
-				</div>
-			</a >
-			<a href="#" class="project" data-slider-unit>
-				<img src="{{site.baseurl}}/assets/img/project_thumb.jpg" alt="{{site.title}}" title="{{site.title}}">
-				<div class="cool-text project-text" data-bgc="#FFEC84">
-					<div class="span-wrap" data-animate>
-						<span></span>
-					</div>
-					<p class="text paragraph big">
-						2222. Web design and development
-						for ARTIS (acrhitectural and
-						structural metalwork
-						company).
-					</p>
-				</div>
-			</a >
-			<a href="#" class="project" data-slider-unit>
-				<img src="{{site.baseurl}}/assets/img/project_thumb.jpg" alt="{{site.title}}" title="{{site.title}}">
-				<div class="cool-text project-text" data-bgc="#FFEC84">
-					<div class="span-wrap" data-animate>
-						<span></span>
-					</div>
-					<p class="text paragraph big">
-						3333. Web design and development
-						for ARTIS (acrhitectural and
-						structural metalwork
-						company).
-					</p>
-				</div>
-			</a >
 
 			<span class="left"></span>
 			<span class="right"></span>
 
 			<aside class="controls" data-slider-controls>
+				{% assign sorted_projects = (site.projects | sort: 'place') | reverse %}
+				{% for project in sorted_projects %}
 				<span></span>
-				<span></span>
-				<span></span>
+				{% endfor %}
 			</aside>
 		</div>
 

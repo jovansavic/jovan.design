@@ -36,6 +36,10 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
+collections:
+  projects:
+    output: true
+    permalink: /work/:path/
 
 include: ["_pages"]
 
