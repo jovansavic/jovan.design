@@ -1,9 +1,10 @@
-<section class="work-section mw-1080 d-flex m-auto p-basic">
+<section id="work" class="w-100 work-section">
+	<section class="work-section-wrap mw-1080 d-flex m-auto p-basic">
 	<div class="w-md-50 text-section">
 		<h2 class="title">
 			{{ site.work_title }}
 		</h2>
-		<p class="paragraph dark">
+		<p class="paragraph light secondary-font font-weight-500">
 			{{ site.work_text }}
 		</p>
 	</div>
@@ -13,17 +14,18 @@
 			{% assign sorted_projects = (site.projects | sort: 'place') | reverse %}
 			{% for project in sorted_projects %}
 				<a href="{{site.baseurl}}{{project.url}}" class="project" data-slider-unit>
-				<img src="{{site.baseurl}}/assets/img/projects/{{ project.thumbnail}}" alt="{{ project.name }} | {{ project.description }}" title="{{ project.name }}">
-				<div class="cool-text project-text" data-bgc="#FFEC84">
-					<div class="span-wrap" data-animate>
-						<span></span>
+					<img src="{{site.baseurl}}/assets/img/projects/{{ project.thumbnail}}" alt="{{ project.name }} | {{ project.description }}" title="{{ project.name }}">
+					<div class="cool-text project-text" data-bgc="#FFEC84">
+						<div class="span-wrap" data-animate>
+							<span></span>
+						</div>
+						<p class="text paragraph big">
+							{{ project.name }} - {{ project.description }}
+						</p>
 					</div>
-					<p class="text paragraph big">
-						{{ project.name }} - {{ project.description }}
-					</p>
-				</div>
-			</a >
+				</a >
 			{% endfor %}
+
 
 
 			<span class="left"></span>
@@ -38,4 +40,5 @@
 		</div>
 
 	</div>
+</section>
 </section>

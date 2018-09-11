@@ -55,7 +55,7 @@ hero_title: UI/UX Designer
 hero_subtitle: "& Front-End Developer"
 hero_text: CSSDA awarded designer who solves problems with his design skills and creates premium looking websites and apps. After finding the best design solution, Jovan gives life to his design by coding it.
 hero_btn_01: CHECK WORK
-hero_btn_01_link: /work/
+hero_btn_01_link: "#work"
 hero_btn_02: ABOUT ME
 hero_btn_02_link: /about/
 hero_image_url: hero_image_url
@@ -72,3 +72,9 @@ cta_title: Contact me
 cta_text: Whatever you have project to work on, questions about my work or about me, or you just want to say Hi, you can contact me via e-mail address. If you are interested in working with me, let’s have a quick call to find if we are good fit togehter.
 cta_btn_01: Send an e-mail
 cta_btn_02: Make a call
+
+
+#Post Page
+client_name: Client name
+client_location: Client location
+what_they_do: What they do

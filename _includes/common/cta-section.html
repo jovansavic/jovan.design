@@ -1,18 +1,20 @@
-<section class="cta-section mw-720 m-auto p-basic">
+<div class="cta-section w-100">
+	<section class="cta-section-wrap mw-1080 m-auto p-basic">
 
-	<h2 class="title">
-		{{ site.cta_title }}
-	</h2>
-	<p class="paragraph big">
-		{{ site.cta_text }}
-	</p>
+		<h2 class="title">
+			{{ site.cta_title }}
+		</h2>
+		<p class="paragraph light font-weight-500 secondary-font">
+			{{ site.cta_text }}
+		</p>
 
-	<a href="mailto:{{site.mail}}" class="btn flat">{{site.mail}}</a>
-	<br>
-	<a href="tel:{{site.phone}}" class="btn flat">{{site.phone}}</a> <p class="paragraph light d-inline-block">({{site.location}})</p>
+		<a href="mailto:{{site.mail}}" class="btn flat">{{site.mail}}</a>
+		<br>
+		<a href="tel:{{site.phone}}" class="btn flat">{{site.phone}}</a> <p class="paragraph light d-inline-block font-weight-500">({{site.location}})</p>
 
-	<br>
-	<br>
-	<a href="mailto:{{site.mail}}" class="btn primary"> {{site.cta_btn_01}}</a>
-	<a href="tel:{{site.phone}}" class="btn secondary make-a-call"> {{site.cta_btn_02}}</a>
-</section>
+		<br>
+		<br>
+		<a href="mailto:{{site.mail}}" class="btn primary mb-1"> {{site.cta_btn_01}}</a>
+		<a href="tel:{{site.phone}}" class="btn secondary make-a-call"> {{site.cta_btn_02}}</a>
+	</section>
+</div>

@@ -1,6 +1,6 @@
 $( window ).on("load", function () {
 	Common.Init();
-	Components.slider();
+	Components.Init();
 });
 
 var Common = {
@@ -104,6 +104,36 @@ var Common = {
 };
 
 var Components = {
+	geometricElements: function (  ) {
+		var $randomShapes = $(".random-shape");
+		var randomNumbers = [];
+
+		if ( $(window).width() > 768 ) {
+
+			$.each( $randomShapes, function ( index, $shape ) {
+				randomNumbers.push( Math.floor(Math.random() * 500) + 50 );
+			});
+
+			console.log( randomNumbers );
+
+			$(window).on("scroll", function (  ) {
+				var scrollTop = $(this).scrollTop();
+
+
+				$.each($randomShapes, function ( index, $shape ) {
+
+
+					$(this).css("top", function (  ) {
+						return scrollTop + randomNumbers[index]  //+ topValue
+					});
+				});
+
+			});
+		} else {
+			$randomShapes.remove();
+		}
+
+	},
 	slider: function (  ) {
 		
 		function getCurrentSlider ( $sliderWrap ) {
@@ -120,41 +150,48 @@ var Components = {
 			var numOfUnits      = $this.find("[data-slider-unit]").length;
 			var $currentUnit    = getCurrentSlider( $this );
 
+			$currentUnit.removeClass("current");
+
 			if ( $currentUnit.index()+1 < numOfUnits ) {
 
-				$currentUnit.removeClass("current");
 				$currentUnit.next().addClass("current");
 
-				var $newUnit    = $this.find(".current");
-				var index       = $newUnit.index();
-
-				console.log( $currentUnit );
-
-				$this.find("[data-slider-unit]").first().css("margin-left", function (  ) {
-					return -index* parseInt($newUnit.width());
-				});
-
+			} else {
+				$this.find("[data-slider-unit]").first().addClass("current");
+				$this.find("[data-slider-controls] span").first().addClass("current");
 			}
+
+			var $newUnit    = $this.find(".current");
+			var index       = $newUnit.index();
+
+			console.log( $currentUnit );
+
+			$this.find("[data-slider-unit]").first().css("margin-left", function (  ) {
+				return -index* parseInt($newUnit.width());
+			});
 		}
 
 		function prevUnit ( $this ) {
 			var $currentUnit    = getCurrentSlider( $this );
 
+			$currentUnit.removeClass("current");
 			if ( $currentUnit.index() > 0 ) {
 
-				$currentUnit.removeClass("current");
 				$currentUnit.prev().addClass("current");
 
-				var $newUnit    = $this.find(".current");
-				var index       = $newUnit.index();
-
-				console.log(index);
-
-				$this.find("[data-slider-unit]").first().css("margin-left", function (  ) {
-					return - index* parseInt($newUnit.width());
-				});
-
+			} else {
+				$this.find("[data-slider-unit]").last().addClass("current");
+				$this.find("[data-slider-controls] span").last().addClass("current");
 			}
+
+			var $newUnit    = $this.find(".current");
+			var index       = $newUnit.index();
+
+			console.log(index);
+
+			$this.find("[data-slider-unit]").first().css("margin-left", function (  ) {
+				return - index* parseInt($newUnit.width());
+			});
 		}
 		
 		$("[data-slider]").swipe( {
@@ -173,5 +210,13 @@ var Components = {
 		$(".right").on("click", function (  ) {
 			nextUnit( $(this).parent() );
 		});
+	},
+	trigerMenu: function (  ) {
+
+	},
+	Init: function (  ) {
+		this.slider();
+		this.geometricElements();
+		// this.trigerMenu();
 	}
 }

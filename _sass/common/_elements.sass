@@ -1,20 +1,22 @@
 .decorated-image
   position: relative
   display: inline-block
+  z-index: -1
   img
     max-width: 100%
   &:after
     display: block
     content: ""
     position: absolute
-    opacity: .15
-    background-color: $secondary-color
+    opacity: .4
+    background-color: $primary-color
+    //background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%)
     width: 120%
-    height: 30%
+    height: 70%
     transform-origin: left
-    transform: rotate(-60deg)
-    left: 30%
-    bottom: -50%
+    transform: rotate(-80deg)
+    left: 40%
+    bottom: -70%
 
 .bgc-image
   width: 3rem
@@ -53,3 +55,56 @@
       width: 0
       transition: .9s
 
+
+
+
+.random-shape
+  position: absolute
+  transform-origin: center
+  width: 2rem
+  height: 2rem
+  background: transparent
+  animation: rotate 1.5s infinite linear
+  z-index: -1
+
+.circle
+  border: .2rem solid $secondary-color
+  border-radius: 50%
+  left: 10%
+  top: 20%
+  animation-name: zoom!important
+  transition: .3s
+
+.cube
+  border: .2rem solid $dark-gray
+  left: 50%
+  top: 60%
+  transition: .1s
+
+.triangle
+  animation-name: zoom!important
+  background: transparent
+  width: 0
+  height: 0
+  border: 1rem solid #FCB903
+  border-top-color: transparent
+  border-left-color: transparent
+  border-right-color: transparent
+  left: 80%
+  top: 40%
+  transition: .5s
+
+
+
+@keyframes rotate
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(90deg)
+@keyframes zoom
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.2)
+  100%
+    transform: scale(1)

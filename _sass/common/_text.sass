@@ -1,7 +1,8 @@
 .title
   font-size: 2rem
+  font-family: $secondary-font
   font-weight: 500
-  color: $primary-color
+  color: $black
   margin-top: 1rem
   margin-bottom: 1rem
 
@@ -17,14 +18,13 @@
 
 .paragraph
   font-size: 1rem
+  font-weight: 400
   &.dark
     color: $black
-    font-weight: 400
   &.big
     font-size: 1.2rem
     font-weight: 500
   &.light
-    font-weight: 400
     color: $dark-gray
 
 
@@ -43,3 +43,11 @@
 
 .text-center
   text-align: center
+
+
+
+$font_weights: (100, 200, 300, 400, 500, 600, 700, 800, 900)
+
+@each $weight in $font_weights
+  .font-weight-#{$weight}
+    font-weight: #{$weight}

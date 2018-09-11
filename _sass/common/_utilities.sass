@@ -16,8 +16,14 @@ $widths_px: (320, 480, 720, 1000, 1080)
     width: 100%
 
 
+.mw-100
+  max-width: 100%
 .m-auto
   margin: auto
+.mr-1
+  margin-right: 1rem
+.mb-1
+  margin-bottom: 1rem
 
 .p-basic
   padding: 2rem
@@ -28,4 +34,4 @@ $display_values: (inline, block, flex, grid, inline-block, inline-flex, table, n
 
 @each $display in $display_values
   .d-#{$display}
-    display: #{$display}
+    display: #{$display}!important
