@@ -58,7 +58,7 @@ var Common = {
 				var delay = elementDelay + i/8;
 				delay += "s";
 				$spanClone.css({
-					"background-color"  : color,
+					"background"  : color,
 					"height"            : fontSize + add,
 					"transition-delay"  : delay
 				});
@@ -212,11 +212,10 @@ var Components = {
 		});
 	},
 	trigerMenu: function (  ) {
-
 	},
 	Init: function (  ) {
 		this.slider();
 		this.geometricElements();
-		// this.trigerMenu();
+		this.trigerMenu();
 	}
 }

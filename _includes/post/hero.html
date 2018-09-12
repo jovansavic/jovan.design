@@ -2,12 +2,12 @@
 	<div class="w-md-50">
 		<div class="post-wrap">
 			<a href="{{site.baseurl}}{{page.url}}" class="project">
-				<img src="{{site.baseurl}}/assets/img/projects/{{ page.thumbnail}}" alt="{{ page.name }} | {{ page.description }}" title="{{ page.name }}">
-				<div class="cool-text project-text" data-bgc="#FFEC84">
+				<img src="{{site.baseurl}}/assets/img/projects/{{ page.thumbnail}}" style="border: .5rem solid {{ page.project_background }};" alt="{{ page.name }} | {{ page.description }}" title="{{ page.name }}">
+				<div class="cool-text project-text" data-bgc="{{ page.project_background }}">
 					<div class="span-wrap" data-animate>
 						<span></span>
 					</div>
-					<p class="text paragraph big">
+					<p class="text paragraph big" style="color: {{page.project_color}};">
 						{{ page.name }} - {{ page.description }}
 					</p>
 				</div>
@@ -27,3 +27,4 @@
 		</div>
 	</div>
 </div>
+

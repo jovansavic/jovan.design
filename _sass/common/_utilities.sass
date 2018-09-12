@@ -1,5 +1,18 @@
 $widths: (10, 20, 30, 40, 50, 60, 70, 80, 90, 100)
 $widths_px: (320, 480, 720, 1000, 1080)
+$rem_sizes: (0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4)
+$sides: (top, right, bottom, left)
+
+
+@each $size in $rem_sizes
+  $index: index($rem_sizes, $size) - 1
+  @each $side in $sides
+    .m#{str-slice($side, 0, 1)}-#{$index}
+      margin-#{$side}: #{$size}rem!important
+
+    .p#{str-slice($side, 0, 1)}-#{$index}
+      padding-#{$side}: #{$size}rem!important
+
 
 @each $width in $widths
   .w-#{$width}
@@ -27,6 +40,10 @@ $widths_px: (320, 480, 720, 1000, 1080)
 
 .p-basic
   padding: 2rem
+
+
+.fancy-border
+  border: .6rem solid $primary-color
 
 // Display
 

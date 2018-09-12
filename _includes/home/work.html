@@ -15,11 +15,11 @@
 			{% for project in sorted_projects %}
 				<a href="{{site.baseurl}}{{project.url}}" class="project" data-slider-unit>
 					<img src="{{site.baseurl}}/assets/img/projects/{{ project.thumbnail}}" alt="{{ project.name }} | {{ project.description }}" title="{{ project.name }}">
-					<div class="cool-text project-text" data-bgc="#FFEC84">
+					<div class="cool-text project-text" data-bgc="{{ project.project_background }}">
 						<div class="span-wrap" data-animate>
 							<span></span>
 						</div>
-						<p class="text paragraph big">
+						<p class="text paragraph big" style="color: {{project.project_color}};">
 							{{ project.name }} - {{ project.description }}
 						</p>
 					</div>
