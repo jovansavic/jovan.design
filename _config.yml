@@ -15,10 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Jovan Savic #TODO: Write this
 email: contact@jovan.design
-description: >- # this means to ignore newlines until "baseurl:" TODO: Write this
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: I help companies with web and/or app design, UI/UX problem solving, creating, improving or redesigning brand. Loving to talk with clients about their goals and to find how we can make a project successful. I can guarantee for a clear and professional process that will make our collaboration going smooth.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jsaviic
@@ -53,7 +50,7 @@ footer_text: designed and developed by jovan savic
 
 hero_title: UI/UX Designer
 hero_subtitle: "& Front-End Developer"
-hero_text: CSSDA awarded designer who solves problems with his design skills and creates premium looking websites and apps. After finding the best design solution, Jovan gives life to his design by coding it.
+hero_text: Jovan is CSSDA awarded designer who solves problems with his design skills and creates premium looking websites and apps. After finding the best design solution, Jovan gives life to his design by coding it.
 hero_btn_01: CHECK WORK
 hero_btn_01_link: "#work"
 hero_btn_02: ABOUT ME
@@ -78,3 +75,12 @@ cta_btn_02: Make a call
 client_name: Client name
 client_location: Client location
 what_they_do: What they do
+
+#Process Page
+process_title: Process
+process_hero_img: me-table.jpg
+process_intro: To provide high-quality work, with minimal surprises it’s important to have a clear process. This process is created from my, and others past experience, and I’m improving it since it’s created. Every time I find something that would improve the process and increase the chance of project success I’m updating this process.
+process_testimonial: “The process is amazing, we worked together through it, and successfully finished development of my website. “
+process_testimonial_name: Stefan Tomic
+process_testimonial_title: Business Broker
+process_testimonial_avatar: stefan-tomic.jpg

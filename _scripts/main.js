@@ -114,7 +114,6 @@ var Components = {
 				randomNumbers.push( Math.floor(Math.random() * 500) + 50 );
 			});
 
-			console.log( randomNumbers );
 
 			$(window).on("scroll", function (  ) {
 				var scrollTop = $(this).scrollTop();
@@ -164,7 +163,6 @@ var Components = {
 			var $newUnit    = $this.find(".current");
 			var index       = $newUnit.index();
 
-			console.log( $currentUnit );
 
 			$this.find("[data-slider-unit]").first().css("margin-left", function (  ) {
 				return -index* parseInt($newUnit.width());
@@ -187,7 +185,6 @@ var Components = {
 			var $newUnit    = $this.find(".current");
 			var index       = $newUnit.index();
 
-			console.log(index);
 
 			$this.find("[data-slider-unit]").first().css("margin-left", function (  ) {
 				return - index* parseInt($newUnit.width());

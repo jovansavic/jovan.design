@@ -13,7 +13,7 @@
 		<div class="project-wrap" data-slider>
 			{% assign sorted_projects = (site.projects | sort: 'place') | reverse %}
 			{% for project in sorted_projects %}
-				<a href="{{site.baseurl}}{{project.url}}" class="project" data-slider-unit>
+				<a href="{{site.baseurl}}{{project.url}}" class="project" data-slider-unit title="{{ project.name }} - {{ project.description }}">
 					<img src="{{site.baseurl}}/assets/img/projects/{{ project.thumbnail}}" alt="{{ project.name }} | {{ project.description }}" title="{{ project.name }}">
 					<div class="cool-text project-text" data-bgc="{{ project.project_background }}">
 						<div class="span-wrap" data-animate>
