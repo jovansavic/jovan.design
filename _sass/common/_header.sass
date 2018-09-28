@@ -1,0 +1,128 @@
+.site-header
+  //height: 6rem
+  box-shadow: 0 3px 6px rgba(0,0,0,.06)
+  background: $white
+  z-index: 999
+  @media (max-width: $medium_bp)
+    display: none
+.site-header-wrap
+  justify-content: space-between
+  align-items: center
+.site-logo
+  color: $primary-color
+  font-family: $secondary-font
+  text-decoration: none
+  font-weight: 500
+.site-nav
+  flex-grow: 1
+  text-align: right
+  a
+    font-size: 1rem
+    font-family: $secondary-font
+    color: $primary-color
+    text-decoration: none
+    position: relative
+    font-weight: 500
+    &:before
+      display: block
+      content: ""
+      position: absolute
+      height: 2px
+      width: 0
+      bottom: 0
+      left: 0
+      transition: .3s
+      background: $primary-color
+    &.current-page:before,
+    &:hover:before
+      width: 100%
+
+  .btn.flat
+    color: $black
+    font-size: 1rem
+    text-transform: lowercase
+    &:before
+      background: $black
+      height: 2px
+
+
+.mobile-header, .mobile-menu
+  display: none
+  @media (max-width: $medium_bp)
+    display: flex
+
+.mobile-header
+  background: $white
+  z-index: 9999
+  position: fixed
+  bottom: 0
+  left: 0
+  justify-content: space-between
+  box-shadow: 0 -3px 6px rgba(0,0,0,.06)
+  height: 70px
+  .menu-toggle
+    cursor: none
+    margin-top: 10px
+    width: 50px
+    height: 50px
+    background: $primary-color
+    color: $white
+    font-size: .7rem
+    font-weight: 500
+    font-family: $secondary-font
+    text-align: center
+    display: flex
+    align-items: center
+    justify-content: center
+  .mobile-logo
+    cursor: none
+    margin-top: 10px
+    border: .25rem solid $primary-color
+    text-decoration: none
+    text-align: center
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 50px
+    height: 50px
+    color: $primary-color
+    font-weight: 500
+    font-size: 1rem
+    font-family: $secondary-font
+
+.mobile-menu
+  z-index: -9999
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: calc( 100vh - 70px )
+  background: $white
+  flex-direction: column
+  text-align: center
+  align-items: center
+  transition: .3s
+  transform: scale(0)
+  border-radius: 1000px
+  justify-content: space-between
+  &.active
+    z-index: 9998
+    transform: scale(1)
+    border-radius: 0
+  img
+    max-width: 128px
+    text-align: center
+.mobile-nav
+  a
+    display: block
+    padding: .8rem
+    color: $primary-color
+    text-decoration: none
+    font-size: 2rem
+    font-weight: 400
+    font-family: $secondary-font
+    &.current-page
+      text-decoration: underline
+.contact-link
+  color: $black
+  font-size: 1.5rem

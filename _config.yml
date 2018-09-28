@@ -84,3 +84,22 @@ process_testimonial: “The process is amazing, we worked together through it, a
 process_testimonial_name: Stefan Tomic
 process_testimonial_title: Business Broker
 process_testimonial_avatar: stefan-tomic.jpg
+
+#About Page
+about_title: About Jovan
+about_intro: I help companies with web and/or app design, UI/UX problem solving, creating, improving or redesigning brand. Loving to talk with clients about their goals and to find how we can make a project successful. I can guarantee for a clear and professional process that will make our collaboration going smooth.
+about_hero_img: me-table.jpg
+
+about_skills_title: Skills
+skill_text_01: As a designer, I’m creating beautiful, modern,  easy to use, websites and apps. It’s very important to create user centered design that are very intuitive.
+skill_text_02: As a Front-End developer, I’m translating mine or someone else designs into pixel perfect websites. Some of the technologies I worked with are Angular 2, WordPress, jQuery, Ajax, Git, etc...
+design: DESIGN
+coding: CODING
+design_skill_img: me-table.jpg
+coding_skill_img: me-table.jpg
+
+#Contact Page
+contact_title: Contact
+contact_text: Whatever you have project to work on, questions about my work or about me, or you just want to say Hi, you can contact me via e-mail address.
+contact_cta: If you are interested in working with me, let’s have a quick conversation to find if we are good fit together.
+contact_hero_img: me-table.jpg

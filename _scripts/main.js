@@ -66,6 +66,11 @@ var Common = {
 			}
 		});
 	},
+	menuTrigger: function (  ) {
+		$(".menu-toggle").on("click", function (  ) {
+			$(".mobile-menu").toggleClass("active");
+		});
+	},
 	isScrolledIntoView: function (elem) {
 		var docViewTop = $(window).scrollTop();
 		var docViewBottom = docViewTop + $(window).height();
@@ -97,9 +102,21 @@ var Common = {
 			return true;
 		}
 	},
+	footerMargin: function () {
+		var mainHeight		= $('#website-main-wrap').outerHeight(),
+		    screenHeight	= $( "body" ).height(),
+		    marTop			= screenHeight- (mainHeight + $('.site-footer').outerHeight());
+		console.log(mainHeight, screenHeight);
+		if(mainHeight < screenHeight){
+			console.log('Margin top: ' +marTop);
+			$('.site-footer').css("margin-top", marTop);
+		}
+	},
 	Init: function (  ) {
 		this.coolText();
+		this.menuTrigger();
 		this.triggerAnimation();
+		this.footerMargin();
 	}
 };
 
@@ -133,6 +150,27 @@ var Components = {
 		}
 
 	},
+	badgeHandler: function (  ) {
+		$("body").on("click", ".badge", function ( e ) {
+			e.preventDefault();
+
+			var targetGroup     = $(this).attr("data-group-target");
+			var $targetGroup    = $("[data-group="+targetGroup+"]");
+
+			var target          = $(this).attr("href");
+			var $target         = $(target);
+
+			var $badgesGroup    = $("[data-group-target="+targetGroup+"]");
+
+
+			$targetGroup.removeClass("active");
+			$target.addClass("active");
+
+			$badgesGroup.removeClass("active");
+			$(this).addClass("active");
+
+		});
+	},
 	slider: function (  ) {
 		
 		function getCurrentSlider ( $sliderWrap ) {
@@ -165,7 +203,7 @@ var Components = {
 
 
 			$this.find("[data-slider-unit]").first().css("margin-left", function (  ) {
-				return -index* parseInt($newUnit.width());
+				return -index* parseInt($newUnit.outerWidth());
 			});
 		}
 
@@ -187,7 +225,7 @@ var Components = {
 
 
 			$this.find("[data-slider-unit]").first().css("margin-left", function (  ) {
-				return - index* parseInt($newUnit.width());
+				return - index* parseInt($newUnit.outerWidth());
 			});
 		}
 		
@@ -214,5 +252,6 @@ var Components = {
 		this.slider();
 		this.geometricElements();
 		this.trigerMenu();
+		this.badgeHandler();
 	}
 }

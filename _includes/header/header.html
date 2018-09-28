@@ -1,3 +1,40 @@
 <div class="random-shape circle"></div>
 <div class="random-shape cube"></div>
 <div class="random-shape triangle"></div>
+
+<div class="site-header w-100">
+	<div class="mw-1080 p-basic d-flex m-auto site-header-wrap pt-1 pb-1">
+		<a class="site-logo" href="{{site.baseurl}}.">
+			JOVAN SAVIC
+		</a>
+		<nav class="site-nav">
+			<a href="{{site.baseurl}}/" class="{% if page.url =='/' %}current-page{% endif %}">HOME</a>
+			<a href="{{site.baseurl}}/about" class="ml-1 {% if page.url =='/about/' %}current-page{% endif %}" >ABOUT</a>
+			<a href="{{site.baseurl}}/process" class="ml-1  {% if page.url =='/process/' %}current-page{% endif %}">PROCESS</a>
+			<!--<a href="{{site.baseurl}}/work" class="ml-1  {% if page.url =='/work/' %}current-page{% endif %}">WORK</a>-->
+			<a href="{{site.baseurl}}/contact" class="ml-1 {% if page.url =='/contact/' %}current-page{% endif %}" >CONTACT</a>
+			<a href="mailto:{{site.mail}}" class="btn flat mr-0">{{site.mail}}</a>
+		</nav>
+	</div>
+</div>
+
+<div class="mobile-header w-100 p-basic pt-0 pb-0">
+	<div class="menu-toggle">
+		MENU
+	</div>
+	<a class="mobile-logo" href="{{site.baseurl}}/">
+		J.S
+	</a>
+</div>
+
+<div class="mobile-menu p-basic">
+	<img src="{{site.baseurl}}/assets/img/me-profile.jpg" alt="{{site.title}} | {{site.description}}" title="{{site.title}} | {{site.description}}">
+	<nav class="mobile-nav">
+		<a href="{{site.baseurl}}/" class="{% if page.url =='/' %}current-page{% endif %}">HOME</a>
+		<a href="{{site.baseurl}}/about" class="{% if page.url =='/about/' %}current-page{% endif %}" >ABOUT</a>
+		<a href="{{site.baseurl}}/process" class=" {% if page.url =='/process/' %}current-page{% endif %}">PROCESS</a>
+		<!--<a href="{{site.baseurl}}/work" class="ml-1  {% if page.url =='/work/' %}current-page{% endif %}">WORK</a>-->
+		<a href="{{site.baseurl}}/contact" class="{% if page.url =='/contact/' %}current-page{% endif %}" >CONTACT</a>
+	</nav>
+	<a href="mailto:{{site.mail}}" class="contact-link">{{site.mail}}</a>
+</div>
