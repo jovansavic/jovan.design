@@ -1,6 +1,10 @@
 .projects-hero
   display: flex
   flex-wrap: wrap
+  @media (max-width: $medium_bp)
+    flex-direction: column
   .project-unit
     max-width: 31%
     margin: 1%
+    @media (max-width: $medium_bp)
+      max-width: 100%
