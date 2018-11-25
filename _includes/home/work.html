@@ -1,18 +1,19 @@
 <section id="work" class="w-100 work-section">
 	<section class="work-section-wrap mw-1080 d-flex m-auto p-basic">
-	<div class="w-md-50 text-section">
+	<div class="w-md-50 text-section" data-animate>
 		<h2 class="title">
 			{{ site.work_title }}
 		</h2>
-		<p class="paragraph light secondary-font font-weight-500">
+		<p class="paragraph light secondary-font font-weight-500" data-animate>
 			{{ site.work_text }}
 		</p>
 	</div>
 	<div class="w-md-50">
 
-		<div class="project-wrap" data-slider>
+		<div class="project-wrap" data-slider data-animate>
 			{% assign sorted_projects = (site.projects | sort: 'place') | reverse %}
 			{% for project in sorted_projects %}
+				{% if project.published %}
 				<a href="{{site.baseurl}}{{project.url}}" class="project" data-slider-unit title="{{ project.name }} - {{ project.description }}">
 					<img src="{{site.baseurl}}/assets/img/projects/{{ project.thumbnail}}" alt="{{ project.name }} | {{ project.description }}" title="{{ project.name }}">
 					<div class="cool-text project-text" data-bgc="{{ project.project_background }}">
@@ -24,6 +25,7 @@
 						</p>
 					</div>
 				</a >
+				{% endif %}
 			{% endfor %}
 
 

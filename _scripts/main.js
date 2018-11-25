@@ -73,12 +73,15 @@ var Common = {
 	},
 	isScrolledIntoView: function (elem) {
 		var docViewTop = $(window).scrollTop();
-		var docViewBottom = docViewTop + $(window).height();
+		var docViewBottom = docViewTop + screen.height;
+
 
 		var elemTop = $(elem).offset().top;
 		var elemBottom = elemTop + $(elem).height();
 
-		return (elemTop <= docViewBottom-100);
+		console.log(elemTop);
+		console.log(docViewBottom-100);
+		return (elemTop <= docViewBottom-150);
 	},
 	triggerAnimation: function () {
 
@@ -103,12 +106,12 @@ var Common = {
 		}
 	},
 	footerMargin: function () {
-		var mainHeight		= $('#website-main-wrap').outerHeight(),
+		var mainHeight		= $("body").outerHeight(),
 		    screenHeight	= $( "body" ).height(),
-		    marTop			= screenHeight- (mainHeight + $('.site-footer').outerHeight());
+		    marTop			= screenHeight - (mainHeight + $('.site-footer').outerHeight());
 		console.log(mainHeight, screenHeight);
 		if(mainHeight < screenHeight){
-			console.log('Margin top: ' +marTop);
+			console.log('Margin top: ' + marTop);
 			$('.site-footer').css("margin-top", marTop);
 		}
 	},

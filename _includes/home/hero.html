@@ -1,14 +1,14 @@
 <section class="hero-section mw-1080 d-flex m-auto p-basic mt-8">
-	<div class="w-md-50">
-		<h1 class="title"> {{ site.hero_title}} </h1>
-		<h2 class="paragraph dark"> {{ site.hero_subtitle}} </h2>
-		<p class="paragraph light secondary-font font-weight-500"> {{ site.hero_text}} </p>
-		<a href="{{ site.hero_btn_01_link }}" class="btn primary" title="{{site.title}}">{{ site.hero_btn_01 }}</a>
-		<a href="{{ site.hero_btn_02_link }}" class="btn secondary" title="{{site.title}}">{{ site.hero_btn_02 }}</a>
+	<div class="w-md-45">
+		<h1 class="title" data-animate> {{ site.hero_title}} </h1>
+		<h2 class="paragraph dark" data-animate> {{ site.hero_subtitle}} </h2>
+		<p class="paragraph light secondary-font font-weight-500" data-animate> {{ site.hero_text}} </p>
+		<a href="{{ site.hero_btn_01_link }}" class="btn primary" title="{{site.title}}" data-animate>{{ site.hero_btn_01 }}</a>
+		<a href="{{ site.hero_btn_02_link }}" class="btn secondary" title="{{site.title}}" data-animate>{{ site.hero_btn_02 }}</a>
 	</div>
-	<div class="w-md-50">
+	<div class="w-md-45">
 		<div class="decorated-image">
-			<img src="{{site.baseurl}}/assets/img/hero.jpg" alt="{{ site.hero_title }} {{ site.title }}" title=" {{ site.title }}">
+			<img src="{{site.baseurl}}/assets/img/hero.png" alt="{{ site.hero_title }} {{ site.title }}" title=" {{ site.title }}" data-animate>
 		</div>
 	</div>
 </section>

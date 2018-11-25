@@ -1,11 +1,15 @@
 $widths: (10, 20, 30, 40, 50, 60, 70, 80, 90, 100)
-$widths_px: (320, 480, 720, 1000, 1080)
+$widths_px: (320, 480, 720, 920, 1000, 1080)
 $rem_sizes: (0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4)
 $sides: (top, right, bottom, left)
 
 
 @each $size in $rem_sizes
   $index: index($rem_sizes, $size) - 1
+  .m-#{$index}
+      margin-: #{$size}rem!important
+  .p-#{$index}
+      padding-: #{$size}rem!important
   @each $side in $sides
     .m#{str-slice($side, 0, 1)}-#{$index}
       margin-#{$side}: #{$size}rem!important
@@ -25,6 +29,10 @@ $sides: (top, right, bottom, left)
 
 .w-md-50
   width: 50%
+  @media (max-width: $medium_bp)
+    width: 100%
+.w-md-45
+  width: 45%
   @media (max-width: $medium_bp)
     width: 100%
 
