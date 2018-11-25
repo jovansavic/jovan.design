@@ -12,7 +12,7 @@
 
 		<div class="project-wrap" data-slider data-animate>
 			{% assign sorted_projects = (site.projects | sort: 'place') | reverse %}
-			{% for project in sorted_projects %}
+			{% for project in sorted_projects limit: 3 %}
 				{% if project.published %}
 				<a href="{{site.baseurl}}{{project.url}}" class="project" data-slider-unit title="{{ project.name }} - {{ project.description }}">
 					<img src="{{site.baseurl}}/assets/img/projects/{{ project.thumbnail}}" alt="{{ project.name }} | {{ project.description }}" title="{{ project.name }}">
@@ -35,7 +35,7 @@
 
 			<aside class="controls" data-slider-controls>
 				{% assign sorted_projects = (site.projects | sort: 'place') | reverse %}
-				{% for project in sorted_projects %}
+				{% for project in sorted_projects limit: 3 %}
 				<span></span>
 				{% endfor %}
 			</aside>
