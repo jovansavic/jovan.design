@@ -52,7 +52,7 @@ hero_title: Web (UI/UX) Designer
 hero_subtitle: "& Front-End Developer"
 hero_text: Jovan is CSSDA awarded designer who solves problems with his design skills and creates premium looking websites and apps. After finding the best design solution, Jovan gives life to his design by coding it.
 hero_btn_01: CHECK WORK
-hero_btn_01_link: "#work"
+hero_btn_01_link: /work/
 hero_btn_02: ABOUT ME
 hero_btn_02_link: /about/
 hero_image_url: hero_image_url
