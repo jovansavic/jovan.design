@@ -51,6 +51,7 @@
   @media (max-width: $medium_bp)
     display: flex
 
+
 .mobile-header
   background: $white
   z-index: 9999
@@ -229,3 +230,8 @@
         color: $black
         i
           color: $black
+
+
+.float-menu, .float-logo, .float-menu-toggle, .menu-shadow
+  @media (min-width: 769px)
+    display: none
