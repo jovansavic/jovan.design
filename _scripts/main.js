@@ -67,8 +67,15 @@ var Common = {
 		});
 	},
 	menuTrigger: function (  ) {
-		$(".menu-toggle").on("click", function (  ) {
-			$(".mobile-menu").toggleClass("active");
+		$(".float-menu-toggle, .menu-shadow").on("click", function (  ) {
+			$(".float-menu, .menu-shadow, .float-menu-toggle").toggleClass("active");
+
+			if ( $('.float-menu-toggle').hasClass("active") ) {
+				$(".float-menu-toggle .material-icons").html("close");
+			} else {
+				$(".float-menu-toggle .material-icons").html("menu");
+			}
+
 		});
 	},
 	isScrolledIntoView: function (elem) {
@@ -79,8 +86,6 @@ var Common = {
 		var elemTop = $(elem).offset().top;
 		var elemBottom = elemTop + $(elem).height();
 
-		console.log(elemTop);
-		console.log(docViewBottom-100);
 		return (elemTop <= docViewBottom-150);
 	},
 	triggerAnimation: function () {
@@ -109,9 +114,7 @@ var Common = {
 		var mainHeight		= $("body").outerHeight(),
 		    screenHeight	= $( "body" ).height(),
 		    marTop			= screenHeight - (mainHeight + $('.site-footer').outerHeight());
-		console.log(mainHeight, screenHeight);
 		if(mainHeight < screenHeight){
-			console.log('Margin top: ' + marTop);
 			$('.site-footer').css("margin-top", marTop);
 		}
 	},
@@ -250,6 +253,7 @@ var Components = {
 		});
 	},
 	trigerMenu: function (  ) {
+
 	},
 	Init: function (  ) {
 		this.slider();
