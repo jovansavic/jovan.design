@@ -76,6 +76,9 @@ client_name: Client name
 client_location: Client location
 what_they_do: What they do
 
+# Projects Page
+projects_title: Projects
+
 #Process Page
 process_title: Process
 process_hero_img: me-table.jpg
