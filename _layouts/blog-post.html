@@ -1,0 +1,18 @@
+<html>
+<head>
+    {% seo %}
+    {% include header/head.html %}
+</head>
+<body>
+{% include header/header.html %}
+
+{% include post/hero.html %}
+
+<div class="mw-920 m-auto p-basic markdown-body">
+{{ content }}
+</div>
+
+{% include common/cta-section.html %}
+{% include footer/footer.html %}
+</body>
+</html>

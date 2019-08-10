@@ -1,0 +1,29 @@
+---
+permalink: /blog/
+layout: default
+asset_name: blog-page
+---
+<div class="projects-hero mw-1000 m-auto p-basic">
+    <h2 class="title">Blog</h2>
+<!--    <p class="paragraph">-->
+<!--        On this page I presented only case studies, if you want to see more, visit my <a href="https://www.behance.net/{{site.behance_username}}" class="btn flat ml-0 mr-0" target="_blank">Behance profile</a>.-->
+<!--    </p>-->
+    {% assign sorted_posts = (site.blog | sort: 'place') %}
+    {% for post in sorted_posts %}
+    {% if post.published %}
+    <div class="project-unit">
+        <a href="{{site.baseurl}}{{post.url}}" class="project" data-slider-unit title="{{ post.name }} - {{ post.description }}">
+            <img src="{{site.baseurl}}/assets/img/blog/{{ post.thumbnail}}" alt="{{ post.name }} | {{ post.description }}" title="{{ post.name }}">
+            <div class="cool-text project-text" data-bgc="{{ post.post_background }}">
+                <div class="span-wrap" data-animate>
+                    <span></span>
+                </div>
+                <p class="text paragraph big" style="color: {{post.post_color}};">
+                    {{ post.name }} - {{ post.description }}
+                </p>
+            </div>
+        </a >
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>

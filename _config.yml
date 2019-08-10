@@ -37,6 +37,9 @@ collections:
   projects:
     output: true
     permalink: /work/:path/
+  blog:
+    output: true
+    permalink: /:path/
 
 include: ["_pages"]
 
