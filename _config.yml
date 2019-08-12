@@ -21,11 +21,12 @@ description: >- # this means to ignore newlines until "baseurl:"
   I can guarantee for a clear and professional process that will make our collaboration going smooth.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jovandotdesign
+dribbble_username:  jovansavic
 github_username:  johnofficial
 instagram_username:  theesigner
+linkedin_username:  jovansavic
+twitter_username: theesigner
 behance_username:  jovansavic
-dribbble_username:  jovansavic
 mail: contact@jovan.design
 phone: 00381 66 8019 888
 location: Serbia

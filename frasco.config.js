@@ -55,6 +55,7 @@ module.exports = {
     dest:  'js',
     entry: [
       'bundle.js',
+      'main.js',
     ],
   },
 
