@@ -1,0 +1,30 @@
+<div class="mw-1080 p-basic post-hero d-flex m-auto">
+	<div class="w-md-50">
+		<div class="post-wrap">
+			<a href="{{site.baseurl}}{{page.url}}" class="project">
+				<img src="{{site.baseurl}}/assets/images/projects/{{ page.thumbnail}}" style="border: .5rem solid {{ page.project_background }};" alt="{{ page.name }} | {{ page.description }}" title="{{ page.name }}">
+				<div class="cool-text project-text" data-bgc="{{ page.project_background }}">
+					<div class="span-wrap" data-animate>
+						<span></span>
+					</div>
+					<p class="text paragraph big" style="color: {{page.project_color}};">
+						{{ page.name }} - {{ page.description }}
+					</p>
+				</div>
+			</a >
+		</div>
+	</div>
+	<div class="w-md-50">
+		<div class="project-meta">
+			<strong class="strong-small">{{site.client_name}}</strong>
+			<p class="paragraph light">{{page.client_name}}</p>
+
+			<strong class="strong-small">{{site.client_location}}</strong>
+			<p class="paragraph light">{{page.client_location}}</p>
+
+			<strong class="strong-small">{{site.what_they_do}}</strong>
+			<p class="paragraph light">{{page.what_they_do}}</p>
+		</div>
+	</div>
+</div>
+

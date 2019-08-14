@@ -1,5 +1,15 @@
 @import "website/common/common";
 
+@import "website/common-sections/testimonials";
+@import "website/common-sections/project";
+@import "website/common-sections/cta-section";
+
 @import "website/homepage/hero";
 @import "website/homepage/work";
 @import "website/homepage/working-on";
+
+@import "website/small-pages/about";
+@import "website/small-pages/projects-page";
+@import "website/small-pages/process-page";
+@import "website/small-pages/contact-page";
+@import "website/small-pages/post";

@@ -1,0 +1,12 @@
+- title: 01. Intro / Preprocess
+  description: This is part where we talk about expectations, requirements, goals, and how we can make this project successfull.
+- title: 02. Content strategy
+  description: Creating user personas (imaginary people) that describes a user of a website/app. Creating content based on those user personas so we can show appropiorate information. In this step, we are also going to write down all the pages we need and create an information architecture.
+- title: 03. Design and Development
+  description: This is possibly the longest step, and it consists of creating wireframes, finding in which design direction to go, and developing our website/app.
+- title: 04. Testing
+  description: After we developed our website/app, we need to test it before a launch to be sure we don’t have any bugs and errors.
+- title: 05. Optimization
+  description: We need to be sure if our website is optimized as much as possible. We need to do things like minifying code, compressing images, etc.
+- title: 06. Launch / Reset
+  description: Finally we are going to launch a website/app. Reset means we’ll start looking for ways to improve our website/app.

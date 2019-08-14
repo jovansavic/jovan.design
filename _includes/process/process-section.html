@@ -1,0 +1,12 @@
+<section class="process-section mw-1080 m-auto pt-8 p-basic">
+
+	{% for process in site.data.process %}
+		<div class="w-100">
+			<div class="title">{{process.title}}</div>
+			<p class="paragraph light">
+				{{process.description}}
+			</p>
+		</div>
+	{% endfor %}
+
+</section>

@@ -1,0 +1,24 @@
+<div class="projects-hero mw-1000 m-auto p-basic">
+	<h2 class="title">{{site.projects_title}}</h2>
+	<p class="paragraph">
+		On this page I presented only case studies, if you want to see more, visit my <a href="https://dribbble.com/{{site.dribbble_username}}" class="btn flat ml-0 mr-0" target="_blank">Dribbble</a> or <a href="https://www.behance.net/{{site.behance_username}}" class="btn flat ml-0 mr-0" target="_blank">Behance</a> profile.
+	</p>
+	{% assign sorted_projects = (site.projects | sort: 'place') | reverse %}
+	{% for project in sorted_projects %}
+	{% if project.published %}
+	<div class="project-unit">
+		<a href="{{site.baseurl}}{{project.url}}" class="project" data-slider-unit title="{{ project.name }} - {{ project.description }}">
+			<img src="{{site.baseurl}}/assets/images/projects/{{ project.thumbnail}}" alt="{{ project.name }} | {{ project.description }}" title="{{ project.name }}">
+			<div class="cool-text project-text" data-bgc="{{ project.project_background }}">
+				<div class="span-wrap" data-animate>
+					<span></span>
+				</div>
+				<p class="text paragraph big" style="color: {{project.project_color}};">
+					{{ project.name }} - {{ project.description }}
+				</p>
+			</div>
+		</a >
+	</div>
+	{% endif %}
+	{% endfor %}
+</div>

@@ -1,0 +1,15 @@
+- name: Linkedin
+  img: linkedin.svg
+  link: https://www.linkedin.com/in/jovansavic/
+- name: Dribbble
+  img: dribbble.svg
+  link: https://dribbble.com/jovansavic
+- name: Behance
+  img: behance.svg
+  link: https://www.behance.net/jovansavic
+- name: Twitter
+  img: twitter.svg
+  link: https://twitter.com/theesigner
+- name: Instagram
+  img: instagram.svg
+  link: https://www.instagram.com/theesigner

@@ -1,0 +1,26 @@
+<section class="contact-hero mw-1080 m-auto d-flex pt-8 p-basic">
+	<div class="contact-cta w-md-50 mb-3">
+		<img src="{{site.baseurl}}/assets/images/{{site.contact_hero_img}}" alt="{{site.title}} | {{site.description}}" title="{{site.title}}" class="w-100 mw-320">
+		<!--<h2 class="title">{{site.contact_title}}</h2>-->
+		<p class="paragraph pt-3 mw-320">
+			{{site.contact_text}}
+		</p>
+		<p class="paragraph mw-320">
+			{{site.contact_cta}}
+		</p>
+	</div>
+
+	<div class="contact-info w-md-50">
+
+		<a href="mailto:{{site.mail}}" class="btn flat ml-0" title="{{site.title}}">{{site.mail}}</a>
+		<!--<br>-->
+		<!--<a href="tel:{{site.phone}}" class="btn flat ml-0" title="{{site.title}}">{{site.phone}}</a> <p class="paragraph light d-inline-block font-weight-500">({{site.location}})</p>-->
+
+		<br>
+		<br>
+
+		{% for social in site.data.socials %}
+			<a href="{{social.link}}" target="_blank"><img src="{{site.baseurl}}/assets/images/{{social.img}}" alt="{{site.title}} | {{site.description}} | {{social.name}} Image" title="{{site.title}} | {{social.name}} Image"></a>
+		{% endfor %}
+	</div>
+</section>

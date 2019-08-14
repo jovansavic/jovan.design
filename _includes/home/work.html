@@ -7,6 +7,7 @@
             <p class="paragraph light secondary-font font-weight-500">
                 {{ site.work_text }}
             </p>
+            <a href="{{ site.hero_btn_01_link }}" class="btn primary mt-3" title="{{site.title}}" >{{ site.hero_btn_01 }}</a>
         </div>
         <div class="w-md-50">
 
@@ -15,9 +16,9 @@
                 {% for project in sorted_projects limit: 3 %}
                 {% if project.published %}
                 <a href="{{site.baseurl}}{{project.url}}" class="project" data-slider-unit title="{{ project.name }} - {{ project.description }}">
-                    <img src="{{site.baseurl}}/assets/img/projects/{{ project.thumbnail}}" alt="{{ project.name }} | {{ project.description }}" title="{{ project.name }}">
+                    <img src="{{site.baseurl}}/assets/images/projects/{{ project.thumbnail}}" alt="{{ project.name }} | {{ project.description }}" title="{{ project.name }}">
                     <div class="cool-text project-text" data-bgc="{{ project.project_background }}">
-                        <div class="span-wrap">
+                        <div class="span-wrap" data-animate>
                             <span></span>
                         </div>
                         <p class="text paragraph big" style="color: {{project.project_color}};">

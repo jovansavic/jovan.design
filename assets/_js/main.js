@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import 'jquery-touchswipe';
 
 $(window).on('load', function() {
     Common.init();

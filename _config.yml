@@ -16,9 +16,7 @@
 title: Jovan Savic Web (UI/UX) Designer
 email: contact@jovan.design
 description: >- # this means to ignore newlines until "baseurl:"
-  I help companies with web and/or app design, UI/UX problem solving, creating, improving or redesigning brand.
-  Loving to talk with clients about their goals and to find how we can make a project successful.
-  I can guarantee for a clear and professional process that will make our collaboration going smooth.
+  Jovan Savic is a creative problem solver. Jovan creates landing pages with conversions, and easy to use softwares.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 dribbble_username:  jovansavic
@@ -36,9 +34,9 @@ footer_text: designed and developed by jovan savic
 
 #Home Page Strings
 
-hero_title: Web (UI/UX) Designer
+hero_title: Web (& UI/UX) Designer
 hero_subtitle: "& Front-End Developer"
-hero_text: Creating UI/UX solutions. Designing Wireframes, Prototypes, and full Websites or Apps. Able to convert web designs into front-end code.
+hero_text: Jovan is designing amazing landing pages with high conversions and making complex software easy with the power of design.
 hero_btn_01: CHECK WORK
 hero_btn_01_link: /work/
 hero_btn_02: ABOUT ME
@@ -46,11 +44,11 @@ hero_btn_02_link: /about/
 hero_image_url: hero_image_url
 
 testimonials_title: They said about me
-work_title: Work
-work_text: I help companies with web and/or app design, UI/UX problem solving, creating, improving or redesigning brand. Loving to talk with clients about their goals and to find how we can make a project successful. I can guarantee for a clear and professional process that will make our collaboration going smooth.
+work_title: Case Studies
+work_text: Read case studies and get insights on how projects can go from start to finish.
 
 working_on_title: Jovan is working on
-working_on_text: Some of the side projects I’m working on are thetrack, deezainirano. I’m creating simple, only you really need time tracking software for macOS, Windows, and Linux. You can see current progress of the app at thetrack.app.
+working_on_text: Some of the projects I’m working on are <a href="https://thetrack.app/" class="text-primary" target="_blank">thetrack</a>, owner.dog, and gosave.me. I’m creating simple, easy to use time tracking software for macOS, Windows, and Linux; website for easy returning pets to their owner; and cross-platform/cross-browser widget for saving cool articles to read later.
 
 
 cta_title: Contact me
@@ -104,6 +102,10 @@ plugins:
   - jekyll-seo-tag
 
 
+collections:
+  projects:
+    output: true
+    permalink: /:path/
 
 include: ["_pages"]
 
