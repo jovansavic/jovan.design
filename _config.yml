@@ -34,11 +34,11 @@ footer_text: designed and developed by jovan savic
 
 #Home Page Strings
 
-hero_title: Web (& UI/UX) Designer
+hero_title: Your search for a Web Designer Ends Here
 hero_subtitle: "& Front-End Developer"
-hero_text: Jovan is designing amazing landing pages with high conversions and making complex software easy with the power of design.
-hero_btn_01: CHECK WORK
-hero_btn_01_link: /work/
+hero_text: Jovan is an entrepreneurial, business-first web designer who will efficiently design a product or a website for your startup/company.
+hero_btn_01: Contact Me
+hero_btn_01_link: /contact/
 hero_btn_02: ABOUT ME
 hero_btn_02_link: /about/
 hero_image_url: hero_image_url
