@@ -4,6 +4,7 @@
   //z-index: -1
   img
     width: 100%
+    border-radius: .5rem
     //border: 1rem solid $black
     box-shadow: 0 3px 12px rgba($black, .06)
   &:after, &:before
@@ -16,8 +17,12 @@
     transition: .3s
   &:after
     left: 0
-    bottom: 0
+    bottom: 2px
+    border-bottom-right-radius: .5rem
+    border-bottom-left-radius: .5rem
   &:before
+    border-top-right-radius: .5rem
+    border-top-left-radius: .5rem
     right: 0
     top: 0
   &:hover
