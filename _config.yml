@@ -51,7 +51,7 @@ work_btn: Case Studies
 work_btn_link: /work/
 
 working_on_title: Jovan is working on
-working_on_text: Some of the projects I’m working on are <a href="https://thetrack.app/" class="text-primary" target="_blank">thetrack</a>, owner.dog, and gosave.me. I’m creating simple, easy to use time tracking software for macOS, Windows, and Linux; website for easy returning pets to their owner; and cross-platform/cross-browser widget for saving cool articles to read later.
+working_on_text: Some of the projects I’m working on are <a href="https://thetrack.app/" class="text-primary" target="_blank">thetrack</a>, <a href="https://petbook.online/" class="text-primary" target="_blank">petbook</a>, and gosave.me. I’m creating simple, easy to use time tracking software for macOS, Windows, and Linux; website for easy returning pets to their owner; and cross-platform/cross-browser widget for saving cool articles to read later.
 
 
 cta_title: Contact me
